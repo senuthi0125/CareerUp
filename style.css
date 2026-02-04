@@ -1,0 +1,453 @@
+/*--- Global Settings ---*/
+
+/*--- For consistent box size ---*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*--- Body styles ---*/
+body {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #111111;
+  background: #F5F5F5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/*--- Wrapper ---*/
+#wrapper {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  min-height: 100vh;
+}
+
+main {
+  padding: 28px 22px 44px;
+}
+
+/*--- Heading and Paragraph spacing ---*/
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+p { margin: 0 0 14px; }
+
+/*--- Header ---*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(15, 15, 15, 0.78);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/*--- Navigation ---*/
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 22px;
+}
+
+/*--- Logo image ---*/
+header nav a img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/*--- Navigation links ---*/
+header nav ul a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+header nav ul a:hover {
+  border-bottom-color: #FFFFFF;
+}
+
+/*--- Buttons ---*/
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid #111111;
+  background: #111111;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.btn:hover { opacity: 0.92; }
+
+/*--- Form button ---*/
+button {
+  display: inline-block;
+  width: auto;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #111111;
+  background: #111111;
+  color: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { opacity: 0.92; }
+
+/*--- Home page ---*/
+.class1 article {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  column-gap: 28px;
+  row-gap: 14px;
+  align-items: start;
+
+  padding: 32px;
+  border: 1px solid #e9e9e9;
+  border-radius: 14px;
+
+  background: #F2F3F5;
+}
+
+.class1 article h1 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.class1 article > p {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 55ch;
+  margin-top: 0;
+}
+
+.class1 article .btn {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: start; 
+  margin-top: 6px;
+  border-radius: 12px;
+}
+
+.class1 article aside {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.class1 article aside img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/*--- Our Services ---*/
+.service-cards {
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid #e9e9e9;
+}
+
+.service-cards h2 {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.service-cards > p {
+  text-align: center;
+  max-width: 75ch;
+  margin: 0 auto 20px;
+  color: #333333;
+}
+
+/*--- Services grid ---*/
+.service-cards > section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  border: 1px solid #DEDEDE;
+  border-radius: 14px;
+  padding: 18px;
+  background: #FFFFFF;
+}
+
+/* Service cards */
+.service-cards .card {
+  border: 1px solid #E2E2E2;
+  border-radius: 14px;
+  padding: 16px;
+  background: #FFFFFF;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-cards .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-cards .card h3 {
+  margin: 4px 0 0;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.service-cards .card p {
+  margin: 0;
+  color: #444444;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.service-cards .card p:last-child {
+  margin-top: auto;
+}
+
+.service-cards .card a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #111111;
+  color: #111111;
+}
+.service-cards .card a:hover {
+  background: #111111;
+  color: #FFFFFF;
+}
+
+/*--- About Page ---*/
+body main > section:has(> article):has(> aside) {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 26px;
+}
+
+/* About page images */
+body main > section:has(> article):has(> aside) > aside img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #E2E2E2;
+}
+
+/* About page text */
+body main > section:has(> article):has(> aside) > article p {
+  margin: 0;
+  line-height: 1.65;
+  color: #2b2b2b;
+  max-width: 70ch;
+}
+
+/* About page heading */
+body main > section:has(> article):has(> aside) > article h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Fix order automatically depending on whether aside comes first or not */
+body main > section:has(> article):has(> aside) > article:first-child {
+  grid-column: 1;  /* text left */
+}
+body main > section:has(> article):has(> aside) > aside:last-child {
+  grid-column: 2;  /* image right */
+}
+
+body main > section:has(> article):has(> aside) > aside:first-child {
+  grid-column: 1;  /* image left (section 2) */
+}
+body main > section:has(> article):has(> aside) > article:last-child {
+  grid-column: 2;  /* text right (section 2) */
+}
+
+/*--- Courses Page ---*/
+body main > section + section > section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+body main > section + section > section > article {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  background: #FFFFFF;
+}
+
+body main > section + section > section > article img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: 230px;
+  object-fit: cover;
+}
+
+body main > section + section > section > article button {
+  width: 100%;
+}
+
+/*--- Resources Page ---*/
+main > section > section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 16px;
+}
+
+main > section > h1,
+main > section > h2 {
+  text-align: center;
+}
+
+main > section > p {
+  text-align: center;
+  max-width: 80ch;
+  margin: 0 auto 16px;
+}
+
+main a[href$=".pdf"] {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #111111;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid #111111;
+}
+main a[href$=".pdf"]:hover { opacity: 0.92; }
+
+/*--- Contact Form Styles ---*/
+form p { margin: 0 0 12px; }
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+input#message {
+  padding-bottom: 40px;
+}
+
+/*--- Footer ---*/
+footer {
+  border-top: 1px solid #ddd;
+  padding: 18px 22px;
+  background: #FFFFFF;
+  font-size: 0.95em;
+}
+
+address {
+  font-style: normal;
+  margin: 10px 0 14px;
+}
+
+footer nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+footer nav img {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+/*--- Contact Page Styles ---*/
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr; /* left image, right form */
+  gap: 28px;
+  align-items: start;
+
+  padding: 26px;
+  border: 1px solid #E9E9E9;
+  border-radius: 14px;
+  background: #FFFFFF;
+}
+
+.contact-layout aside img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.contact-layout h2 {
+  margin-bottom: 14px;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.contact-layout form p {
+  margin: 0 0 14px;
+}
+
+.contact-layout input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #CCCCCC;
+  font: inherit;
+}
+
+.contact-layout #message {
+  padding-bottom: 44px;
+}
+
+.contact-layout button {
+  width: auto;    
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
